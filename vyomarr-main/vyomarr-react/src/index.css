@@ -1,0 +1,140 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+body{
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 11 / var(--tw-bg-opacity, 1));
+  font-family: Inter, sans-serif;
+  --tw-text-opacity: 1;
+  color: rgb(248 250 252 / var(--tw-text-opacity, 1));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: Montserrat, sans-serif;
+}
+
+.container{
+  width: 100%;
+}
+
+@media (min-width: 475px){
+  .container{
+    max-width: 475px;
+  }
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
+.cosmic-glow {
+  box-shadow: var(--shadow-cosmic);
+}
+
+.cosmic-glow-subtle {
+  box-shadow: var(--shadow-subtle);
+}
+
+.transition-cosmic {
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-cosmic-slow {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.border-cosmic {
+  border: 1px solid var(--border-subtle);
+}
+
+.border-cosmic-accent {
+  border: 1px solid var(--border-accent);
+}
+
+.font-clash{
+  font-family: Clash Display, sans-serif;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-lato {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+:root {
+  /* Primary Colors */
+  --color-primary: #000B49;
+  /* deep cosmic blue */
+  --color-secondary: #1B1F30;
+  /* dark slate */
+  --color-accent: #4F46E5;
+  /* vibrant indigo */
+  /* Background Colors */
+  --color-background: #0A0A0B;
+  /* near-black */
+  --color-surface: #1A1B23;
+  /* elevated dark surface */
+  /* Text Colors */
+  --color-text-primary: #F8FAFC;
+  /* high-contrast white */
+  --color-text-secondary: #94A3B8;
+  /* muted blue-gray */
+  /* Status Colors */
+  --color-success: #10B981;
+  /* cosmic green */
+  --color-warning: #F59E0B;
+  /* stellar amber */
+  --color-error: #EF4444;
+  /* mars red */
+  /* Shadow Colors */
+  --shadow-cosmic: 0 4px 20px rgba(79, 70, 229, 0.15);
+  --shadow-subtle: 0 2px 8px rgba(79, 70, 229, 0.1);
+  --shadow-moderate: 0 8px 32px rgba(79, 70, 229, 0.2);
+  --shadow-prominent: 0 16px 48px rgba(79, 70, 229, 0.25);
+  /* Border Colors */
+  --border-subtle: rgba(148, 163, 184, 0.2);
+  --border-accent: var(--color-accent);
+}
