@@ -5,31 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Vyomarr</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        background: '#0B0C10', /* Deep cosmic dark */
-                        surface: '#1F2833',    /* Lighter card bg */
-                        accent: '#66FCF1',     /* Cyan accent */
-                        secondary: '#45A29E',  /* Muted teal */
-                        text: {
-                            primary: '#FFFFFF',
-                            secondary: '#C5C6C7'
-                        }
+                        pagebg: '#0B0C10',      /* Dark background */
+                        navy: {
+                            deep: '#14213D',    /* Deep Space Navy */
+                        },
+                        accent: '#FCA311',      /* Interactive Orange */
+                        secondary: '#E5E5E5'
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif'], /* Using Space Grotesk as Clash alternative */
+                        headings: ['Montserrat', 'sans-serif'],
+                        body: ['Lato', 'sans-serif'],
                     },
                     boxShadow: {
-                        'cosmic': '0 4px 20px -2px rgba(102, 252, 241, 0.15)',
-                        'glow': '0 0 15px rgba(102, 252, 241, 0.3)'
+                        'glow': '0 0 20px rgba(252, 163, 17, 0.3)'
                     }
                 }
             }
@@ -37,170 +35,173 @@
     </script>
 
     <style>
-        /* Custom scrollbar for cosmic feel */
-        ::-webkit-scrollbar {
-            width: 8px;
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B0C10; }
+        ::-webkit-scrollbar-thumb { background: #FCA311; border-radius: 4px; }
+
+        /* Card Hover & Focus Logic */
+        .card-hover {
+            transition: all 0.3s ease;
         }
-        ::-webkit-scrollbar-track {
-            background: #0B0C10;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #45A29E;
-            border-radius: 4px;
-        }
-        .card-hover:hover {
+        /* Orange border on Hover, Active, and Focus */
+        .card-hover:hover, 
+        .card-hover:focus-within {
+            border-color: #FCA311;
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px -5px rgba(102, 252, 241, 0.2);
-            border-color: #66FCF1;
+            box-shadow: 0 10px 25px -5px rgba(252, 163, 17, 0.15);
+        }
+        .card-hover:active {
+            transform: scale(0.99);
         }
     </style>
 </head>
-<body class="bg-background text-text-primary font-sans min-h-screen antialiased selection:bg-accent selection:text-background">
+<body class="bg-pagebg text-gray-800 font-body min-h-screen antialiased selection:bg-accent selection:text-navy-deep">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
         <header class="text-center mb-16 space-y-4">
-            <h1 class="text-5xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-accent to-secondary">
+            <h1 class="text-5xl md:text-6xl font-headings font-bold text-navy-deep drop-shadow-md">
                 Privacy Policy
             </h1>
-            <p class="text-text-secondary text-lg max-w-2xl mx-auto">
-                Your privacy is our priority. [cite_start]Below is an overview of how Vyomarr protects and manages your data. [cite: 4]
+            <p class="text-gray-400 font-body text-lg max-w-2xl mx-auto">
+                Your privacy is our priority. Below is an overview of how Vyomarr protects and manages your data.
             </p>
-            <div class="inline-block px-4 py-1 rounded-full border border-secondary/30 bg-surface/50 text-sm text-accent">
-                [cite_start]Last Updated: July 9, 2025 [cite: 3]
+            <div class="inline-block px-4 py-1 rounded-full border border-gray-700 bg-gray-800/50 text-sm text-accent font-body">
+                Last Updated: July 9, 2025
             </div>
         </header>
 
         <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">1. General Principles</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">1. General Principles</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]We process all data lawfully, fairly, and transparently, ensuring it is accurate and limited strictly to necessary purposes[cite: 6, 8, 10].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    We process all data lawfully, fairly, and transparently, ensuring it is accurate and limited strictly to necessary purposes.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">2. Info We Collect</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">2. Info We Collect</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]We collect personal identifiers (name, email), usage patterns, and device information to facilitate our services[cite: 14, 16, 17].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    We collect personal identifiers (name, email), usage patterns, and device information to facilitate our services.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">3. Usage of Info</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">3. Usage of Info</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]Data is used to provide services, personalize your experience, ensure security, and comply with legal obligations[cite: 19, 21, 22, 24].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    Data is used to provide services, personalize your experience, ensure security, and comply with legal obligations.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">4. Legal Basis</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">4. Legal Basis</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]Our processing is grounded in your consent, contract performance, legal compliance, or legitimate business interests[cite: 26, 27].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    Our processing is grounded in your consent, contract performance, legal compliance, or legitimate business interests.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">5. Sharing & Disclosure</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">5. Sharing & Disclosure</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]We do not sell data but may share it with trusted service providers or legal authorities when absolutely necessary[cite: 32, 33, 35].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    We do not sell data but may share it with trusted service providers or legal authorities when absolutely necessary.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">6. Data Security</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">6. Data Security</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]We use robust technical measures to protect data, though we cannot guarantee absolute security over the internet[cite: 37, 38, 40].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    We use robust technical measures to protect data, though we cannot guarantee absolute security over the internet.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">7. Data Retention</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">7. Data Retention</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]We retain your personal data only for as long as necessary to fulfill the specific purposes outlined in this policy[cite: 41, 42].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    We retain your personal data only for as long as necessary to fulfill the specific purposes outlined in this policy.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group border-l-4 border-l-accent">
+            <div class="card-hover bg-white border-2 border-transparent border-l-4 border-l-accent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">8. Your Rights</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">8. Your Rights</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]You have the right to access, correct, delete ("right to be forgotten"), or restrict the processing of your personal data[cite: 44, 46, 48].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    You have the right to access, correct, delete ("right to be forgotten"), or restrict the processing of your personal data.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">9. Cookies</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">9. Cookies</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]We use cookies to analyze site usage and personalize your experience; you can manage these via browser settings[cite: 53, 54, 58].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    We use cookies to analyze site usage and personalize your experience; you can manage these via browser settings.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">10. External Links</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">10. External Links</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]Our site contains links to third parties; we are not responsible for their privacy practices or content[cite: 59, 60].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    Our site contains links to third parties; we are not responsible for their privacy practices or content.
                 </p>
             </div>
 
-            <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+            <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">11. Children's Privacy</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">11. Children's Privacy</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    [cite_start]Services are not for users under 16. We do not knowingly collect data from children under this age[cite: 62, 63].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    Services are not for users under 16. We do not knowingly collect data from children under this age.
                 </p>
             </div>
 
-             <div class="card-hover bg-surface border border-white/5 rounded-2xl p-8 transition-all duration-300 cursor-pointer group">
+             <div class="card-hover bg-white border-2 border-transparent rounded-2xl p-8 cursor-pointer group h-full focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-display font-bold text-white group-hover:text-accent transition-colors">12. Updates</h2>
-                    <span class="text-secondary opacity-50 group-hover:opacity-100">→</span>
+                    <h2 class="text-xl font-headings font-bold text-navy-deep group-hover:text-accent transition-colors">12. Updates</h2>
+                    <span class="text-accent opacity-0 group-hover:opacity-100 transition-opacity font-bold">→</span>
                 </div>
-                <p class="text-text-secondary leading-relaxed text-sm">
-                    We may update this policy periodically. [cite_start]Any changes will be posted here with a new effective date[cite: 64, 65, 66].
+                <p class="text-gray-600 font-body leading-relaxed text-sm">
+                    We may update this policy periodically. Any changes will be posted here with a new effective date.
                 </p>
             </div>
 
         </main>
 
-        <footer class="mt-16 text-center p-10 bg-gradient-to-b from-surface to-background rounded-3xl border border-white/5">
-            <h3 class="text-2xl font-display font-bold text-white mb-4">Questions or Concerns?</h3>
-            <p class="text-text-secondary mb-8">
-                [cite_start]If you have questions about this policy or wish to exercise your data rights, please contact us[cite: 69].
+        <footer class="mt-16 text-center p-10 bg-white rounded-3xl border border-gray-800 focus:outline-none focus:ring-2 focus:ring-accent" tabindex="0">
+            <h3 class="text-2xl font-headings font-bold text-navy-deep mb-4">Questions or Concerns?</h3>
+            <p class="text-gray-600 mb-8 font-body">
+                If you have questions about this policy or wish to exercise your data rights, please contact us.
             </p>
-            <a href="mailto:support@vyomarr.com" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-background bg-accent rounded-lg hover:bg-secondary transition-colors duration-300 shadow-glow">
+            <a href="mailto:support@vyomarr.com" class="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-navy-deep bg-accent rounded-lg hover:bg-white hover:text-accent border-2 border-transparent hover:border-accent transition-all duration-300 font-headings shadow-glow">
                 Contact Support
             </a>
         </footer>
